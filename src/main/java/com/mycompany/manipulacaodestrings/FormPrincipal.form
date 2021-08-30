@@ -25,18 +25,24 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="2" attributes="0">
-                  <Component id="TFDigitePalavra" alignment="2" min="-2" pref="166" max="-2" attributes="0"/>
-                  <Component id="JCoperacoes" alignment="2" min="-2" max="-2" attributes="0"/>
-                  <Component id="TFdigiteChave" alignment="2" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="TFDigitePalavra" alignment="2" min="-2" pref="166" max="-2" attributes="0"/>
+                          <Component id="JCoperacoes" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="JLdigiteUmaChave" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Component id="TFdigiteChave" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="JBenviar" min="-2" pref="63" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
               <Component id="TFresultado" min="-2" pref="194" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
               <Component id="jSeparator1" min="-2" pref="1" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -52,15 +58,17 @@
                           <Component id="jSeparator1" min="-2" max="-2" attributes="0"/>
                           <Component id="JCoperacoes" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="JLdigiteUmaChave" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="TFdigiteChave" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="JBenviar" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Component id="TFresultado" alignment="0" min="-2" pref="96" max="-2" attributes="0"/>
+                  <Component id="TFresultado" alignment="0" min="-2" pref="112" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="49" max="32767" attributes="0"/>
+              <EmptySpace pref="14" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -81,7 +89,6 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="JCoperacoesFocusGained"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JCoperacoesActionPerformed"/>
       </Events>
       <AuxValues>
@@ -97,9 +104,9 @@
     <Component class="javax.swing.JTextField" name="TFdigiteChave">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Digite uma chave de 1 digito"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="TFdigiteChaveMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TFdigiteChaveActionPerformed"/>
       </Events>
     </Component>
@@ -122,6 +129,11 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JBenviarActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="JLdigiteUmaChave">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Digite uma chave de um digito."/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
